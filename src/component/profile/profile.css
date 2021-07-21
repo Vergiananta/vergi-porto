@@ -1,0 +1,28 @@
+.profile-animation{
+    cursor: pointer;
+}
+
+.profile-animation:hover{
+    animation: bounce 1s linear;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+@keyframes bounce {
+    20%,50%,80%,to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+}

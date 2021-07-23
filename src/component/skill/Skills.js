@@ -3,7 +3,7 @@
 
 function Skill(){
     return (
-        <div></div>
+        <div>Skill</div>
     )
 }
 

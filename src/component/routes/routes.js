@@ -1,6 +1,7 @@
 import Biography from "../biography/Biography";
 import Dashboard from "../dashboard/Dashboard";
 import Project from '../project/Project';
+import Skill from "../skill/Skills";
 
 
 const routes = [

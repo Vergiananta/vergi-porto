@@ -1,0 +1,13 @@
+.container-bg {
+    background-color: blue;
+ 
+    
+}
+
+.content {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+   
+}
+

@@ -4,6 +4,7 @@ import skill from '../../assert/icon/skillLogo.png'
 import project from '../../assert/icon/project.png'
 import { Button } from 'reactstrap';
 import { AiFillUpCircle } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 function SkillProject() {
 
@@ -14,16 +15,22 @@ function SkillProject() {
     return (
         <Fragment>
             <div class="header">
-                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                {/* <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <Button href="#page1" onClick="location.href='#page1'" color="transparent" >
                         <AiFillUpCircle size={50} color='#f5f5f5' className='btn-skill' />
                     </Button>
-                </div>
-                <div class="inner-header flex" style={{ justifyContent: 'space-around' }}>
-
-                    <img src={skill} width="10%" height="auto" className="image-skill" />
-
-                    <img src={project} width="10%" height="auto" className="image-project"/>
+                </div> */}
+                <div class="inner-header flex" style={{ justifyContent: 'space-evenly' }}>
+                    <div>
+                        <Link to="/dashboard/skill">
+                            <img src={skill}  className="image-skill" />
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to="/dashboard/project">
+                            <img src={project} className="image-project" />
+                        </Link>
+                    </div>
                 </div>
 
                 <div>

@@ -8,7 +8,7 @@ import SkillProject from "../section2/SkillProject";
 function Dashboard() {
     return (
         <Fragment>
-            <div className="container-dashboard">
+            <div className="container-dashboard" >
                 <div className="home-body" id="page1">
                     <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                         <div class="home__data">

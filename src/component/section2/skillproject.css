@@ -30,7 +30,7 @@ p {
 }
 
 .inner-header {
-    height : 65vh;
+    height : 60vh;
     width  : 100%;
     margin : 0;
     padding: 0;
@@ -124,6 +124,7 @@ p {
 
 .image-skill {
     cursor: pointer;
+    width: 100px;
     transition: transform .2s;
 }
 
@@ -133,6 +134,7 @@ p {
 
 .image-project {
     cursor: pointer;
+    width: 150px;
     transition: transform .2s;
 }
 

@@ -51,7 +51,7 @@ function SkillProject() {
                                 </Col>
                                 <Col>
                                     <img src={enigma} width="50%" alt="enigma"/>
-                                    <p style={{ color: 'white', textAlign: 'left', fontSize: '2vw', marginTop: '30px' }}>PT. Enigma Cipta Humanika <br></br> <span>June 2021-July 2021</span></p>
+                                    <p style={{ color: 'white', textAlign: 'left', fontSize: '2vw', marginTop: '30px' }}>PT. Enigma Cipta Humanika <br></br> <span>Internal Project</span></p>
                                     <p style={{ color: 'white', textAlign: 'left', fontSize: '1vw' }}>Description: <br></br>Develop Backend of Talent showcase Enigmacamp </p>
                                 </Col>
                             </Row>

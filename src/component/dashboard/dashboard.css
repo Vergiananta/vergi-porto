@@ -3,9 +3,13 @@
 
 .container-dashboard {
     scroll-behavior: smooth;
-    overflow       : hidden;
+   
     height         : 100%;
   
+}
+
+div {
+    overflow       : hidden;
 }
 
 h1,
@@ -15,14 +19,14 @@ p {
 }
 
 :root {
-    --header-height: 5rem;
+    --header-height: 10rem;
     --font-semi    : 600;
 }
 
 /*===== Colores =====*/
 :root {
     --first-color : #4070F4;
-    --second-color: #0E2431;
+    --second-color: #ffff;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -162,7 +166,7 @@ i {
 
 #page1 {
     height                 : 800px;
-    background-image       : url(../../assert/background/background1.gif);
+    background-image       : url(../../assert/background/background2.jpg);
     -webkit-background-size: cover;
     -moz-background-size   : cover;
     -o-background-size     : cover;
@@ -170,7 +174,7 @@ i {
 }
 
 #page2 {
-    height: 800px;
+    height: 1700px;
 
     /* background-color: yellow; */
 }

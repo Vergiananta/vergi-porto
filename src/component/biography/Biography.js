@@ -1,30 +1,85 @@
-import { Component } from "react";
-import { Col, Row } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import './biography.css'
 import line from '../../assert/line/line.png';
-import data from "./data";
+import { data, data2 } from "./data";
+import { useState } from "react";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Biography() {
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll = () => setOffsetY(window.pageYOffset);
+    console.log(offsetY);
+    useEffect(() => {
+       
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
+    useEffect(() => {
+        Aos.init({duration: 2000});
+    })
     return (
-        <div style={{overflowX: 'scroll'}}>
+        <div className="container-bg" >
+            <div style={{width: '100%', justifyContent: 'center', textAlign: 'center', color: 'white', paddingTop: '100px'}}>
+                <h1 style={{fontWeight: 'bold', fontFamily: 'Comic Sans'}} data-aos='zoom-in'>BIOGRAPHY</h1>
+            </div>
+            <Container>
+            <Row xs="3">
+                <Col sm="5">
+                    {data.map((datas, i) => {
+                        return (
+                            <div className="contents" key={i} style={{ transform: `translateY(${offsetY * 0.5}px)` }} >
+                                <div style={{ justifyContent: 'center', textAlign: 'center' }}>
+                                    <p className="date_text" data-aos='fade-right'>{datas.year}</p>
+                                </div>
+                            </div>
+                        )
+                    })}
+                    {data2.map((datas, i) => {
+                        return (
+                            <div className="content_2" key={i} style={{ transform: `translateY(${offsetY * 0.3}px)` }}>
+                                <div style={{ justifyContent: 'center', textAlign: 'center' }}>
+                                    <p className="date_text" data-aos='fade-right'>{datas.year}</p>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </Col>
+                <Col sm="2">
 
-            {data.map((datas, i) => {
-                return (
-                    <div className="content" key={i} style={{ height: '700px'}}>
-                        <div >
-                            <p>{datas.year}</p>
-                        </div>
-                        <div >
-                            <img src={datas.line} style={{ height: "500px", backgroundRepeat: "repeat-y", width: "300px" }} />
-                        </div>
-                        <div>
-                            <p>{datas.description}</p>
-                        </div>
-                    </div>
-                )
-            })}
+                    <img src={line} style={{ height: "2500px", width: "300px", marginTop: "50px", justifyContent: 'center' }} alt="Biography"/>
 
+                </Col>
+                <Col>
+                    {data.map((datas, i) => {
+                        return (
+                            <div key={i} className="content_decription" style={{ transform: `translateY(${offsetY * 0.2}px)` }} >
+                                <div style={{ justifyContent: 'center', textAlign: 'center' }}>
+                                    <p className="date_description_title"  data-aos="fade-left">{datas.title}</p>
+                                    <p className="date_description_company" data-aos="fade-left">{datas.company}</p>
+                                    <p className="date_description" data-aos="fade-left">{datas.description}</p>
+                                </div>
+                            </div>
+
+                        )
+                    })}
+                    {data2.map((datas, i) => {
+                        return (
+                            <div key={i} className="content_decription_2" style={{ transform: `translateY(${offsetY * 0.05}px)` }}>
+                                <div style={{ justifyContent: 'center', textAlign: 'center' }}>
+                                    <p className="date_description" style={{ color: 'white', fontSize: '25px', fontWeight: 'bold' }} data-aos="fade-left">{datas.title}</p>
+                                    <p className="date_description" style={{ marginTop: '20px', fontWeight: 'bold', fontSize: '20px' }} data-aos="fade-left">{datas.company}</p>
+                                    <p className="date_description" data-aos="fade-left">{datas.description}</p>
+                                </div>
+                            </div>
+
+                        )
+                    })}
+                </Col>
+            </Row>
+            </Container>
         </div>
 
     )

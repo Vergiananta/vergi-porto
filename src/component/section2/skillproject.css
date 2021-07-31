@@ -17,31 +17,15 @@ p {
 .header {
     position  : relative;
     text-align: center;
-    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    background-image: url(../../assert/background/section2.jpeg);
     color     : white;
 }
 
-.logo {
-    width         : 50px;
-    fill          : white;
-    padding-right : 15px;
-    display       : inline-block;
-    vertical-align: middle;
-}
-
 .inner-header {
-    height : 60vh;
+    height : 100%;
     width  : 100%;
     margin : 0;
     padding: 0;
-}
-
-.flex {
-    /*Flexbox for containers*/
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    text-align     : center;
 }
 
 .waves {
@@ -113,31 +97,6 @@ p {
     }
 }
 
-.btn-skill {
-    margin: 10px;
-    transition: transform .2s;
-}
-
-.btn-skill:hover {
-    transform: scale(1.5);
-}
-
-.image-skill {
-    cursor: pointer;
-    width: 100px;
-    transition: transform .2s;
-}
-
-.image-skill:hover {
-    transform: scale(1.5);
-}
-
-.image-project {
-    cursor: pointer;
-    width: 150px;
-    transition: transform .2s;
-}
-
-.image-project:hover {
-    transform: scale(1.5);
+.container_project {
+    height: 95rem
 }

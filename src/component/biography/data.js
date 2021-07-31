@@ -1,6 +1,6 @@
 import line from '../../assert/line/line.png'
 
-const data = [
+export const data = [
     {
         year: "September 2014 - Februari 2018",
         line: line,
@@ -8,13 +8,10 @@ const data = [
         company: "Universitas Hang Tuah Surabaya",
         description: "Bachelor of Oceanography"
     },
-    {
-        year: "Februari 2020 - October 2020",
-        line: line,
-        title: "Education",
-        company: "PT Enigma Cipta Humanika",
-        description: "IT Bootcamp Software Developer"
-    },
+   
+];
+
+export const data2 = [
     {
         year: "Maret 2017 - April 2017",
         line: line,
@@ -30,12 +27,18 @@ const data = [
         description: "Safetyman & Lead Project Onsite PT Pertamina Terminal BBM Malang"
     },
     {
+        year: "Februari 2020 - October 2020",
+        line: line,
+        title: "Education",
+        company: "PT Enigma Cipta Humanika",
+        description: "IT Bootcamp Software Developer"
+    },
+    {
         year: "Oktober 2020 - Oktober 2022",
         line: line,
         title: "Experience",
         company: "PT Enigma Cipta Humanika",
         description: "Backend Developer and co-trainer"
     },
-]
+];
 
-export default data;

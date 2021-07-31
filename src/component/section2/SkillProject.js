@@ -1,36 +1,62 @@
 import { Fragment } from 'react';
 import './skillproject.css'
-import skill from '../../assert/icon/skillLogo.png'
-import project from '../../assert/icon/project.png'
-import { Button } from 'reactstrap';
-import { AiFillUpCircle } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import blueNomads from '../../assert/projects/blueNomads.jpg'
+import phillipines from '../../assert/projects/phillipin.jpg'
+import trenggalek from '../../assert/projects/Trenggalek3.gif';
+import talent from '../../assert/projects/talent_enigma.png'
+import { Col, Container, Row } from 'reactstrap';
+import uht from '../../assert/projects/univhangtuah.jpg';
+import { Parallax } from 'react-parallax';
+import enigma from '../../assert/projects/enigma.jpeg'
 
 function SkillProject() {
-
-    const handleClick = () => {
-
-    }
 
     return (
         <Fragment>
             <div class="header">
-                {/* <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <Button href="#page1" onClick="location.href='#page1'" color="transparent" >
-                        <AiFillUpCircle size={50} color='#f5f5f5' className='btn-skill' />
-                    </Button>
-                </div> */}
-                <div class="inner-header flex" style={{ justifyContent: 'space-evenly' }}>
-                    <div>
-                        <Link to="/dashboard/skill">
-                            <img src={skill}  className="image-skill" />
-                        </Link>
-                    </div>
-                    <div>
-                        <Link to="/dashboard/project">
-                            <img src={project} className="image-project" />
-                        </Link>
-                    </div>
+                <div class="inner-header">
+                    <Container className="container_project">
+                        <h1 style={{ marginTop: '5rem', marginBottom: '5rem' }}>PROJECT</h1>
+                        <Col className="my-5">
+                            <Row>
+                                <Col>
+                                    <Parallax bgImage={phillipines} strength={15}><div style={{ height: '20rem' }} /></Parallax>
+
+                                </Col>
+                                <Col>
+                                    <img src={blueNomads} width="20%" alt="bluenomads" />
+                                    <p style={{ color: 'white', textAlign: 'left', fontSize: '2vw', marginTop: '30px' }}>BlueNomads Philippines <br></br> <span>August 2017</span></p>
+                                    <p style={{ color: 'white', textAlign: 'left', fontSize: '1vw' }}>Description: <br></br>Help partner to Analyze and Visualization ocean current data in Visayan Sea, Philippines</p>
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col className="my-5">
+                            <Row>
+                                <Col><img src={uht} width="20%" style={{ float: 'right' }} alt="uht" />
+                                    <div style={{ clear: 'right' }}>
+                                        <p style={{ color: 'white', textAlign: 'right', fontSize: '2vw', marginTop: '30px' }}>Universitas Hang Tuah <br></br> <span>September 2017-January 2018</span></p>
+                                        <p style={{ color: 'white', textAlign: 'right', fontSize: '1vw' }}>Description: <br></br>Visualization and Simulate Tsunami wave at Trenggalek, East Java for Bachelor thesis</p>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <img src={trenggalek} alt="trenggalek" />
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col className="my-5">
+                            <Row>
+                                <Col>
+                                    <img src={talent} style={{ height: '55%' }} alt="talent"/>
+
+                                </Col>
+                                <Col>
+                                    <img src={enigma} width="50%" alt="enigma"/>
+                                    <p style={{ color: 'white', textAlign: 'left', fontSize: '2vw', marginTop: '30px' }}>PT. Enigma Cipta Humanika <br></br> <span>July 2020</span></p>
+                                    <p style={{ color: 'white', textAlign: 'left', fontSize: '1vw' }}>Description: <br></br>Develop Backend of Talent showcase Enigmacamp </p>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Container>
                 </div>
 
                 <div>
@@ -48,9 +74,6 @@ function SkillProject() {
                     </svg>
                 </div>
             </div>
-
-
-
         </Fragment>
     )
 }

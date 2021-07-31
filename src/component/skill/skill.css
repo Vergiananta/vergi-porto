@@ -1,0 +1,145 @@
+
+
+.container_skill {
+    background-image: url(../../assert/background/cosmic.jpg);
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+  
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+
+.container_image {
+    overflow-x: visible;
+    overflow-y: hidden;
+    height: 770px;
+    white-space:nowrap;
+    flex-direction:row;
+    display: flex;
+    position: relative;
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.image {
+    box-shadow: 1px 1px 10px #999;
+    margin: 2px;
+    max-height: 450px;
+    cursor: pointer;
+    display:inline-block;
+    position: relative;
+    width: 600px;
+    height:auto;
+    min-width: 30%;
+    min-height: auto;
+    margin-right: 30px;
+    background-color: #fff;
+    justify-content: center;
+    margin-top:10%
+}
+
+.image__img {
+    display: block;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    justify-content: center;
+    align-items    : center;
+    position: relative;
+}
+
+.image img {
+    transition: all 1.2s ease;
+}
+
+.image:hover img{
+    transform: scale(1.2);
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3));
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.image__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+    color: #ffffff;
+}
+
+.title {
+    box-shadow: 1px 1px 10px #999;
+    margin: 20px;
+    max-height: 450px;
+    position: relative;
+    width: 400px;
+    height:auto;
+    min-width: 20%;
+    min-height: auto;
+    margin-right: 30px;
+    background-color: #fff;
+    justify-content: center;
+    margin-top:10%
+}
+
+.bg_title {
+   background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(../../assert/skill/skill.jpg);
+   background-size: cover;
+ 
+}
+
+.text-title {
+    font-family: 'Comic Sans';
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}

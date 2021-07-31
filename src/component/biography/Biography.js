@@ -69,8 +69,8 @@ function Biography() {
                         return (
                             <div key={i} className="content_decription_2" style={{ transform: `translateY(${offsetY * 0.05}px)` }}>
                                 <div style={{ justifyContent: 'center', textAlign: 'center' }}>
-                                    <p className="date_description" style={{ color: 'white', fontSize: '25px', fontWeight: 'bold' }} data-aos="fade-left">{datas.title}</p>
-                                    <p className="date_description" style={{ marginTop: '20px', fontWeight: 'bold', fontSize: '20px' }} data-aos="fade-left">{datas.company}</p>
+                                    <p className="date_description_title"  data-aos="fade-left">{datas.title}</p>
+                                    <p className="date_description_company"  data-aos="fade-left">{datas.company}</p>
                                     <p className="date_description" data-aos="fade-left">{datas.description}</p>
                                 </div>
                             </div>

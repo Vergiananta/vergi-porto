@@ -49,7 +49,7 @@ function Biography() {
                 </Col>
                 <Col sm="2">
 
-                    <img src={line} style={{ height: "2500px", width: "300px", marginTop: "50px", justifyContent: 'center' }} alt="Biography"/>
+                    <img src={line} className="img_bio" alt="Biography"/>
 
                 </Col>
                 <Col>

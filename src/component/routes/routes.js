@@ -1,6 +1,7 @@
 import Biography from "../biography/Biography";
 import Dashboard from "../dashboard/Dashboard";
 import Skill from "../skill/Skills";
+import Error from '../error/Error';
 
 
 const routes = [
@@ -18,7 +19,11 @@ const routes = [
         path: '/dashboard/biography',
         component: <Biography/>,
         exact : true
-    }
+    },
+    {
+        path: '*',
+        component: <Error />
+      }
 ]
 
 export default routes;

@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Parallax } from "react-parallax";
 import bg1 from "../../assert/background/background2.jpg";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
 
@@ -27,7 +28,9 @@ function Dashboard() {
                                     <a href="https://github.com/Vergiananta" class="home__social-icon"><AiFillGithub /></a>
                                     <a href="https://www.linkedin.com/in/christian-vergiananta-tamonsang-68133417a/" class="home__social-icon"><AiFillLinkedin /></a>
                                 </div>
-                                <Button className="button" href="/dashboard/skill" ><span>My Skills</span></Button>
+                                <Link to="/dashboard/skill">
+                                <Button className="button" ><span>My Skills</span></Button>
+                                </Link>
                             </Col>
                             <Col sm={{ size: 3, order: 1, offset: 1 }}>
                                 <Profile />

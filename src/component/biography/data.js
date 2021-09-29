@@ -34,7 +34,7 @@ export const data2 = [
         description: "IT Bootcamp Software Developer"
     },
     {
-        year: "Oktober 2020 - Oktober 2022",
+        year: "Oktober 2020 - Present",
         line: line,
         title: "Experience",
         company: "PT Enigma Cipta Humanika",
